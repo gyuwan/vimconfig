@@ -1,12 +1,17 @@
 set guifont=±¼¸²Ã¼:h12:cHANGEUL:qDRAFT
 
-source $VIMCONFIG/vimconfig/cscope_maps.vim
+source $VIMCONFIG/cscope_maps.vim
 
 let mapleader = ","
+
+unmap <C-f>
 
 set nobackup
 set nowritebackup
 set noundofile
+
+set smartindent
+set softtabstop=4 tabstop=4 shiftwidth=4 expandtab "tab to 4 spaces
 
 set number
 
@@ -43,7 +48,7 @@ call vundle#begin('$VIMCONFIG/bundle')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'plantuml-syntax'
+Plugin 'aklt/plantuml-syntax'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
