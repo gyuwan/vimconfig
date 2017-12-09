@@ -1,11 +1,18 @@
-set guifont=±¼¸²Ã¼:h12:cHANGEUL:qDRAFT
+"set guifont=±¼¸²Ã¼:h12:cHANGEUL:qDRAFT
 
-source $VIMCONFIG/cscope_maps.vim
+source $VIMCONFIG/vimconfig/cscope_maps.vim
 
-let mapleader = ","
+set noimd
+set imi=2 
+set ims=-1
+
+set hlsearch
 
 unmap <C-f>
 
+let mapleader = ","
+
+set noswapfile
 set nobackup
 set nowritebackup
 set noundofile
@@ -37,12 +44,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-"set rtp+=C:\Users\redwa\Documents\Project\bundle\Vundle.vim
 set rtp+=$VIMCONFIG/bundle/Vundle.vim
 
-"call vundle#begin('C:\Users\redwa\Documents\Project\bundle')
 call vundle#begin('$VIMCONFIG/bundle')
-"call vundle#begin('C:\Program Files (x86)\Vim\vimfiles\bundle')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -54,7 +58,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'dhruvasagar/vim-table-mode'
-"Plugin 'wincent/command-t'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'Mark--Karkat'
 
