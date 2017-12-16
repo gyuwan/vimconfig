@@ -1,6 +1,10 @@
-"set guifont=±º∏≤√º:h12:cHANGEUL:qDRAFT
+"set guifont=Íµ¥Î¶ºÏ≤¥:h12:cHANGEUL:qDRAFT
 
 source $VIMCONFIG/vimconfig/cscope_maps.vim
+
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
 
 set noimd
 set imi=2 
@@ -8,7 +12,9 @@ set ims=-1
 
 set hlsearch
 
-unmap <C-f>
+if has('win32')
+    unmap <C-f>
+endif
 
 let mapleader = ","
 
@@ -21,6 +27,11 @@ set smartindent
 set softtabstop=4 tabstop=4 shiftwidth=4 expandtab "tab to 4 spaces
 
 set number
+
+noremap! kj <ESC>
+noremap! „Öè„Öì <ESC>
+
+noremap! <ESC> <nop>
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -60,6 +71,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'Mark--Karkat'
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
